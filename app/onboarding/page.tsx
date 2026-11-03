@@ -81,18 +81,39 @@ export default function Onboarding() {
   }
 
   return (
-    <main className="onboarding-page">
-      <Link href="/landing" className="brand">
+    <main
+      className="onboarding-page"
+      style={{
+        height: "100vh",
+        maxHeight: "100vh",
+        overflow: "hidden",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        padding: "20px clamp(24px, 5vw, 64px)",
+      }}
+    >
+      <Link href="/" className="brand">
         <span className="brand-mark">LS</span> Learning Street
       </Link>
 
-      <section className="onboarding-card">
+      <section
+        className="onboarding-card"
+        style={{
+          margin: "auto",
+          padding: "24px 32px",
+          maxWidth: 620,
+          width: "100%",
+        }}
+      >
         <div className="step-label">
           PERSONALIZED VILLAGE SETUP <span>STEP 01 / 01</span>
         </div>
 
-        <h1>Let’s meet, neighbour.</h1>
-        <p>
+        <h1 style={{ margin: "10px 0 6px", fontSize: "clamp(26px, 3.2vw, 36px)" }}>
+          Let’s meet, neighbour.
+        </h1>
+        <p style={{ margin: "0 0 16px", fontSize: 13 }}>
           Tell us your name and select your class so we can tailor the houses, games, and questions on your street.
         </p>
 

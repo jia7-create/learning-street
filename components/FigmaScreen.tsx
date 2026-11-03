@@ -167,9 +167,11 @@ export default function FigmaScreen({
     <main className={pageClass}>
       <div
         className="figma-frame"
-        style={{
-          aspectRatio: `${screen.width} / ${screen.height}`
-        }}
+        style={
+          isSinglePageFit
+            ? { width: "100vw", height: "100vh" }
+            : { aspectRatio: `${screen.width} / ${screen.height}` }
+        }
       >
         <img
           src={`/figma/${name}.svg`}
@@ -177,6 +179,11 @@ export default function FigmaScreen({
           height={screen.height}
           alt=""
           className="figma-artboard"
+          style={
+            isSinglePageFit
+              ? { width: "100%", height: "100%", objectFit: "fill" }
+              : undefined
+          }
         />
 
         {/* Integrated Topbar Search Bar with House Icon */}
