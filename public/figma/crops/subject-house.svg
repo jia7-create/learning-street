@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 908 759" width="908" height="759">
+  <defs>
+    <pattern id="crop" patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use xlink:href="#img" transform="matrix(0.00148408 0 0 0.00177624 -0.691617 -1.20115)"/>
+    </pattern>
+    <image id="img" width="1200" height="1697" xlink:href="/figma/assets/all-subjects-img-0.png"/>
+  </defs>
+  <rect width="908" height="759" fill="url(#crop)"/>
+</svg>

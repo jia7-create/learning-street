@@ -5,6 +5,9 @@ import { useLearning } from "./LearningProvider";
 export default function SiteHeader({ active }: { active?: string }) {
   const { learner } = useLearning();
   return <header className="topbar">
+    <Link href="/hub" className="header-home-link" aria-label="Back to Learner's Hub" title="Learner's Hub" style={{ display: "inline-flex", alignItems: "center", marginRight: 8 }}>
+      <img src="/figma/home-icon.svg" alt="Home" style={{ width: 26, height: 26, display: "block" }} />
+    </Link>
     <Link className="brand" href="/hub" aria-label="Learning Street home"><span className="brand-mark">LS</span><span>Learning Street</span></Link>
     <label className="site-search"><span aria-hidden="true">⌕</span><input aria-label="Search subjects or topics" placeholder="Search subject or topics…" onKeyDown={e => { if (e.key === "Enter") window.location.href = `/subjects?search=${encodeURIComponent((e.target as HTMLInputElement).value)}`; }} /></label>
     <nav className="topnav" aria-label="Main navigation">

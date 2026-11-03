@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 504 772" width="504" height="772">
+  <defs>
+    <pattern id="crop" patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use xlink:href="#img" transform="matrix(0.00794238 0 0 0.0051891 -4.56487 -3.78709)"/>
+    </pattern>
+    <image id="img" width="762" height="980" xlink:href="/figma/assets/simon-says-2-img-1.png"/>
+  </defs>
+  <rect width="504" height="772" fill="url(#crop)"/>
+</svg>

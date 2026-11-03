@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1255 970" width="1255" height="970">
+  <defs>
+    <pattern id="crop" patternContentUnits="objectBoundingBox" width="1" height="1">
+      <use xlink:href="#img" transform="matrix(0.00581395 0 0 0.0075188 -4.93605 -8.12782)"/>
+    </pattern>
+    <image id="img" width="1200" height="1697" xlink:href="/figma/assets/learners-hub-img-0.png"/>
+  </defs>
+  <rect width="1255" height="970" fill="url(#crop)"/>
+</svg>
