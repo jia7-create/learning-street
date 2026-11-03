@@ -28,8 +28,8 @@
 .figma-hotspot:hover{background-color:#E3EAF7!important;mix-blend-mode:multiply;box-shadow:0 6px 22px rgba(70,102,188,.22);transform:translateY(-2px)}
 .figma-hotspot:active,.figma-hotspot[aria-pressed="true"]{background-color:#E3EAF7!important;mix-blend-mode:multiply;transform:scale(.98)}
 .figma-hotspot svg{display:block;width:100%;height:100%}
-.figma-page.screen-fit{min-height:100vh;width:100%;overflow-x:hidden;background:#fff;align-items:center;justify-content:center}
-.figma-page.screen-fit .figma-frame{width:100vw;max-width:100%;height:auto;margin:0;box-shadow:none;border-radius:0}
+.figma-page.screen-fit{min-height:100vh;width:100%;overflow-x:hidden;background:#fff;align-items:flex-start;justify-content:center}
+.figma-page.screen-fit .figma-frame{width:100%;max-width:100%;height:auto;margin:0;box-shadow:none;border-radius:0}
 .figma-page.screen-hub{background:#fff;min-height:100vh;width:100%;display:flex;justify-content:center;padding:0 0 30px}
 .figma-page.screen-hub .figma-frame{width:100%;max-width:100%;margin:0;box-shadow:none;border-radius:0}
 .figma-home-icon-link{position:absolute;z-index:10;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;cursor:pointer;border-radius:50%;transition:transform .18s ease,background-color .18s ease;padding:.15%}.figma-home-icon-link:hover,.figma-home-icon-link:active{transform:scale(1.14);background:#E3EAF7!important}.figma-home-icon-link:focus-visible{outline:3px solid #4666bc;outline-offset:2px}.figma-home-icon-img{width:100%;height:100%;display:block}
