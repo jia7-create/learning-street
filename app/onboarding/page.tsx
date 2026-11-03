@@ -84,41 +84,48 @@ export default function Onboarding() {
     <main
       className="onboarding-page"
       style={{
-        height: "100vh",
-        maxHeight: "100vh",
-        overflow: "hidden",
+        minHeight: "100dvh",
+        overflowY: "auto",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
-        padding: "20px clamp(24px, 5vw, 64px)",
+        padding: "14px clamp(20px, 4vw, 56px) 20px",
+        boxSizing: "border-box",
       }}
     >
-      <Link href="/" className="brand">
-        <span className="brand-mark">LS</span> Learning Street
-      </Link>
+      <div style={{ flexShrink: 0, marginBottom: 6 }}>
+        <Link href="/" className="brand">
+          <span className="brand-mark">LS</span> Learning Street
+        </Link>
+      </div>
 
       <section
         className="onboarding-card"
         style={{
           margin: "auto",
-          padding: "24px 32px",
+          padding: "20px 28px",
           maxWidth: 620,
           width: "100%",
+          boxSizing: "border-box",
         }}
       >
         <div className="step-label">
           PERSONALIZED VILLAGE SETUP <span>STEP 01 / 01</span>
         </div>
 
-        <h1 style={{ margin: "10px 0 6px", fontSize: "clamp(26px, 3.2vw, 36px)" }}>
+        <h1
+          style={{
+            margin: "8px 0 4px",
+            fontSize: "clamp(24px, 2.8vw, 32px)",
+          }}
+        >
           Let’s meet, neighbour.
         </h1>
-        <p style={{ margin: "0 0 16px", fontSize: 13 }}>
+        <p style={{ margin: "0 0 14px", fontSize: 13 }}>
           Tell us your name and select your class so we can tailor the houses, games, and questions on your street.
         </p>
 
-        <form onSubmit={submit}>
-          <label className="field-label">
+        <form onSubmit={submit} style={{ display: "grid", gap: 12 }}>
+          <label className="field-label" style={{ gap: 5 }}>
             What is your name?
             <input
               autoFocus
@@ -129,13 +136,18 @@ export default function Onboarding() {
               }}
               placeholder="e.g. Jia, Maya, Arjun..."
               maxLength={48}
+              style={{ height: 40 }}
             />
           </label>
 
-          <div className="field-row">
-            <label className="field-label">
+          <div className="field-row" style={{ gap: 12 }}>
+            <label className="field-label" style={{ gap: 5 }}>
               Your Class / Grade
-              <select value={grade} onChange={(e) => setGrade(e.target.value)}>
+              <select
+                value={grade}
+                onChange={(e) => setGrade(e.target.value)}
+                style={{ height: 40 }}
+              >
                 <option value="5">Class 5 (Junior Foundations)</option>
                 <option value="6">Class 6 (Middle School Concepts)</option>
                 <option value="10">Class 10 (Board Exam Level)</option>
@@ -143,9 +155,13 @@ export default function Onboarding() {
               </select>
             </label>
 
-            <label className="field-label">
+            <label className="field-label" style={{ gap: 5 }}>
               Board / Syllabus
-              <select value={board} onChange={(e) => setBoard(e.target.value)}>
+              <select
+                value={board}
+                onChange={(e) => setBoard(e.target.value)}
+                style={{ height: 40 }}
+              >
                 <option value="CBSE">CBSE (NCERT Aligned)</option>
                 <option value="ICSE">ICSE / ISC (CISCE Aligned)</option>
               </select>
@@ -153,12 +169,14 @@ export default function Onboarding() {
           </div>
 
           <fieldset className="subject-picker">
-            <legend>Which subject houses do you want on your street?</legend>
+            <legend style={{ marginBottom: 6 }}>
+              Which subject houses do you want on your street?
+            </legend>
             <div
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(2, 1fr)",
-                gap: "10px",
+                gap: "8px",
               }}
             >
               {availableSubjects.map((s) => {
@@ -171,8 +189,8 @@ export default function Onboarding() {
                     onClick={() => toggle(s.name)}
                     aria-pressed={isChosen}
                     style={{
-                      padding: "12px 14px",
-                      borderRadius: "14px",
+                      padding: "9px 12px",
+                      borderRadius: "12px",
                       display: "flex",
                       alignItems: "center",
                       gap: "10px",
@@ -184,12 +202,12 @@ export default function Onboarding() {
                   >
                     <span
                       style={{
-                        width: "22px",
-                        height: "22px",
+                        width: "20px",
+                        height: "20px",
                         borderRadius: "6px",
                         display: "grid",
                         placeItems: "center",
-                        fontSize: "12px",
+                        fontSize: "11px",
                         fontWeight: 800,
                         backgroundColor: isChosen ? "#111" : "#edf0f7",
                         color: isChosen ? "#fff" : "#777",
@@ -199,7 +217,11 @@ export default function Onboarding() {
                     </span>
                     <div>
                       <strong
-                        style={{ display: "block", fontSize: "13px", color: "#111" }}
+                        style={{
+                          display: "block",
+                          fontSize: "12.5px",
+                          color: "#111",
+                        }}
                       >
                         {s.icon} {s.name}
                       </strong>
@@ -213,11 +235,12 @@ export default function Onboarding() {
             </div>
           </fieldset>
 
-          <label className="field-label">
+          <label className="field-label" style={{ gap: 5 }}>
             Language for explanations
             <select
               value={language}
               onChange={(e) => setLanguage(e.target.value)}
+              style={{ height: 40 }}
             >
               <option value="English">English</option>
               <option value="Hinglish">Hinglish (Hindi + English)</option>
@@ -229,13 +252,17 @@ export default function Onboarding() {
             <p
               className="form-error"
               role="alert"
-              style={{ color: "#c92a2a", fontWeight: 600 }}
+              style={{ color: "#c92a2a", fontWeight: 600, margin: 0 }}
             >
               {error}
             </p>
           )}
 
-          <button className="black-button form-submit" type="submit">
+          <button
+            className="black-button form-submit"
+            type="submit"
+            style={{ minHeight: 46, marginTop: 2 }}
+          >
             Enter Learning Street <span aria-hidden="true">→</span>
           </button>
         </form>
