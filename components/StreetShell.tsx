@@ -36,9 +36,9 @@ export function StreetShell({
         style={{
           flex: 1,
           width: "100%",
-          maxWidth: 1360,
-          margin: "0 auto",
-          padding: "20px 32px 28px",
+          maxWidth: "100%",
+          margin: 0,
+          padding: "20px clamp(20px, 3vw, 44px) 28px",
           boxSizing: "border-box",
           display: "flex",
           flexDirection: "column",

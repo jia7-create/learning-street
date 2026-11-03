@@ -278,9 +278,9 @@ export default function AiScreenPage() {
     <StreetShell bg="#ffffff" backHref="/hub" backLabel="Back to Street">
       <div
         style={{
-          maxWidth: 940,
+          maxWidth: "100%",
           width: "100%",
-          margin: "0 auto",
+          margin: 0,
           display: "flex",
           flexDirection: "column",
           gap: 14,

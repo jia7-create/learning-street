@@ -94,9 +94,9 @@ export function FigmaHeader({
     <header
       style={{
         width: "100%",
-        maxWidth: 1360,
-        margin: "0 auto",
-        padding: "12px 32px",
+        maxWidth: "100%",
+        margin: 0,
+        padding: "12px clamp(20px, 3vw, 44px)",
         borderBottom: "1px solid #e6e7ec",
         display: "flex",
         alignItems: "center",

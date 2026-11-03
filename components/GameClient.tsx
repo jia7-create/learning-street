@@ -673,10 +673,11 @@ export default function GameClient({
       <div
         style={{
           flex: 1,
-          maxWidth: 1240,
+          maxWidth: "100%",
           width: "100%",
-          margin: "0 auto",
-          padding: "12px 28px 16px",
+          margin: 0,
+          padding: "12px clamp(20px, 3vw, 40px) 16px",
+          boxSizing: "border-box",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
